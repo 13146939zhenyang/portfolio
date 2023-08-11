@@ -10,12 +10,12 @@ export default function Home() {
           <source src="/water.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className='bg-[#1f1f1f] bg-opacity-80 backdrop-filter backdrop-blur-lg w-full h-full absolute top-0 left-0 z-20'>
-        <div className='w-full h-full flex flex-row flex-wrap relative p-20 overflow-hidden'>
+      <div className='bg-[#1f1f1f] bg-opacity-80 backdrop-filter backdrop-blur-sm w-full h-full absolute top-0 left-0 z-20'>
+        <div className='w-full h-full flex flex-row flex-wrap relative px-5 py-[60px] overflow-hidden justify-between'>
           <div className='h-full flex items-center'>
             <DeveloperCard />
           </div>
-          <div className='h-full overflow-scroll bg-black'>
+          <div className='h-full overflow-scroll w-[calc(80vw-550px)] min-w-[700px] lg:mr-[9%] mr-0'>
             <Introduction />
             <About />
             <Skills />

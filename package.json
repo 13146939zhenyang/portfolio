@@ -35,5 +35,8 @@
     "typescript": "5.1.6",
     "uuidv4": "^6.2.13",
     "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/typed.js": "^2.0.9"
   }
 }
