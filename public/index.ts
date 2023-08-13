@@ -1,2 +1,3 @@
 import Avatar from './avatar.jpg'
-export { Avatar }
+import Project from './project.png'
+export { Avatar, Project }

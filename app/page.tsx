@@ -11,7 +11,7 @@ export default function Home() {
         </video>
       </div>
       <div className='bg-[#1f1f1f] bg-opacity-80 backdrop-filter backdrop-blur-sm w-full h-full absolute top-0 left-0 z-20'>
-        <div className='w-full h-full flex flex-row flex-wrap relative px-5 py-[60px] overflow-hidden justify-between'>
+        <div className='w-full h-full flex flex-row flex-wrap relative px-5 overflow-hidden justify-between'>
           <div className='h-full flex items-center'>
             <DeveloperCard />
           </div>
@@ -23,7 +23,7 @@ export default function Home() {
             <Resume />
             <Contact />
           </div>
-          <div className='absolute h-full right-5'>
+          <div className='absolute h-full right-[70px] flex items-center'>
             <SideNav />
           </div>
         </div>
