@@ -15,7 +15,7 @@ export default function Home() {
           <div className='h-full flex items-center'>
             <DeveloperCard />
           </div>
-          <div className='h-full overflow-scroll w-[calc(80vw-550px)] min-w-[700px] lg:mr-[9%] mr-0'>
+          <div className='h-full overflow-scroll w-[calc(80vw-520px)] min-w-[700px] lg:mr-[9%] mr-0'>
             <Introduction />
             <About />
             <Skills />
