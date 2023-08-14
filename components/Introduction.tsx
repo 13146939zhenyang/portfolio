@@ -6,7 +6,7 @@ import { Project } from '@/public'
 
 const Introduction = () => {
   return (
-    <div className='text-white h-screen w-full  pt-[70px]'>
+    <div className='text-white h-screen w-full pt-[70px]' id='introduction'>
       {/* tag section */}
       <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
         <AiOutlineHome className="mb-[2px] text-sm" />

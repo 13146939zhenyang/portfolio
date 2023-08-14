@@ -15,12 +15,12 @@ export default function Home() {
           <div className='h-full flex items-center'>
             <DeveloperCard />
           </div>
-          <div className='h-full overflow-scroll w-[calc(80vw-520px)] min-w-[700px] lg:mr-[9%] mr-0'>
+          <div className='h-full overflow-scroll w-[calc(80vw-520px)] min-w-[700px] lg:mr-[9%] mr-0' id='container'>
             <Introduction />
             <About />
+            <Resume />
             <Skills />
             <Portfolio />
-            <Resume />
             <Contact />
           </div>
           <div className='absolute h-full right-[70px] flex items-center'>
