@@ -5,6 +5,11 @@ import { BsArrowDown } from 'react-icons/bs'
 import { Project } from '@/public'
 
 const Introduction = () => {
+  const handleClick = () => {
+    const element = document.getElementById('portfolio')
+    const container = document.getElementById('container');
+    container?.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
+  }
   return (
     <div className='text-white h-screen w-full pt-[70px]' id='introduction'>
       {/* tag section */}
@@ -25,7 +30,7 @@ const Introduction = () => {
       </p>
       {/* ads circle */}
       <div className='w-full flex justify-start pl-[500px]'>
-        <div className='flex justify-center items-center w-[175px] h-[175px] rounded-full relative border-[1px] border-[#575757] cursor-pointer hover:border-[#58EA8B] hover:text-[#58EA8B] transition-all duration-150 ease-in-out'>
+        <div className='flex justify-center items-center w-[175px] h-[175px] rounded-full relative border-[1px] border-[#575757] cursor-pointer hover:border-[#58EA8B] hover:text-[#58EA8B] transition-all duration-150 ease-in-out' onClick={handleClick}>
           <img src={Project.src} alt="projcet" className='m-2 w-[141px] h-[148px] spinner absolute' />
           <BsArrowDown className="text-3xl font-bold animate-bounce" />
         </div>
