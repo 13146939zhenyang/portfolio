@@ -17,15 +17,15 @@ const About = () => {
           an even <span className='text-[#58EA8B]'>better story</span></h3>
         <p className='mb-[1rem] leading-8 max-w-[610px] break-all text-base text-[#999999]'>
           3+ years’ hands-on experience in programming with HTML, CSS, JavaScript/ES6, jQuery, and modern CSS/JavaScript libraries. 2+ years’ professional experience in programming with React.js and Node.js, and 1+ year experience in building website using Shopify with liquid and React.js.
-          <br/>
-          <br/>
+          <br />
+          <br />
           I have delivered or taken part in developing 8 commercial projects successfully during my professional career, 2  Shopify projects , 2 serverless projects and 4 MERN projects.
-          <br/>
-          <br/>
+          <br />
+          <br />
           I am passionate about technologies and enjoy learning new technologies. Pursue continuous improvement of code quality and build project code in a strictly standardized format. Optimism and can face challenges at work positively. Likes teamwork and enjoys independent problem-solving time.
-          <br/>
-          <br/>
-          I'm quietly confident, naturally curious, and perpetually working on improving my chopsone design problem at a time.
+          <br />
+          <br />
+          I&apos;m quietly confident, naturally curious, and perpetually working on improving my chopsone design problem at a time.
         </p>
       </div>
     </div>
