@@ -31,7 +31,34 @@ html {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
+}
+
+.resume-item::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #656565;
+  border-radius: 50%;
+  left: -6px;
+  top: 7px;
+  transition: .3s;
+}
+.resume-item:hover::before {
+  background: #28e98c;
+}
+
+.resume-item::after {
+  content: '';
+  background: #333333;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  z-index: -1;
 }
