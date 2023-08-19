@@ -9,6 +9,9 @@ const Portfolio = () => {
         <TfiLayoutAccordionList className="mb-[2px] text-sm" />
         <span className='uppercase font-[250]'>Portfolio</span>
       </div>
+      <div className='cursor-default'>
+        <h3 className='text-5xl leading-[60px] font-light mb-8'>Featured<span className='text-[#58EA8B]'> Projects</span></h3>
+      </div>
     </div>
   )
 }

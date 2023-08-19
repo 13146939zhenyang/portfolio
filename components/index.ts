@@ -6,5 +6,6 @@ import Portfolio from "./Portfolio";
 import Resume from "./Resume";
 import Skills from "./Skills";
 import SideNav from "./SideNav";
+import Logo from './Logo'
 
-export { Introduction, About, Contact, DeveloperCard, Portfolio, Resume, Skills, SideNav };
+export { Introduction, About, Contact, DeveloperCard, Portfolio, Resume, Skills, SideNav, Logo };

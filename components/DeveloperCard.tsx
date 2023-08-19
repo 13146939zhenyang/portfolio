@@ -3,13 +3,22 @@ import React from 'react'
 import { Avatar } from '@/public'
 import { BsEnvelope } from 'react-icons/bs'
 import { socialMediaLinks } from '@/utils/constants'
+import { Logo } from '@/components'
 
 const DeveloperCard = () => {
   return (
     <div className='text-white border-[1px] border-[#565656] rounded-3xl p-[50px] text-base flex flex-col'>
       {/* title section */}
       <div className='w-full flex flex-row justify-between items-center mb-[30px]'>
-        <span className='text-5xl font-semibold'>Zhen</span>
+        <div className='text-5xl font-semibold'>
+          <div className='relative'>
+            <span>Zhen</span>
+            <div className='absolute -top-[10px] -right-[35px]'>
+              <Logo />
+            </div>
+          </div>
+        </div>
+
         <p className='w-[140px] flex flex-col leading-none text-sm gap-2 text-right'>
           <span className='w-full'>Fullstack Developer</span>
           <span>& Web Developer</span>
