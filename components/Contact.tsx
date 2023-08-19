@@ -16,8 +16,9 @@ const Contact = () => {
       theme={{
         components: {
           Button: {
-            colorPrimary: '#00b96b',
-            algorithm: true, // Enable algorithm
+            colorPrimary: '#58EA8B',
+            colorBorder: '#58EA8B',
+            colorPrimaryHover: '#28E98C',
           },
           Input: {
             colorPrimary: '#00000000',
@@ -53,7 +54,7 @@ const Contact = () => {
           </Form.Item>
           <Form.Item
             name="email"
-            rules={[{ required: true, message: 'Please input your full email!' }]}
+            rules={[{ required: true, message: 'Please input your email!' }]}
           >
             <Input className='bg-transparent text-white ' />
           </Form.Item>
@@ -75,10 +76,9 @@ const Contact = () => {
           >
             <Input.TextArea className='bg-transparent text-white' />
           </Form.Item>
-
-          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button type="primary" htmlType="submit">
-              Submit
+          <Form.Item>
+            <Button htmlType="submit" className='bg-[#58EA8B] hover:bg-transparent w-[243px] h-[52px] text-base uppercase rounded-full'>
+              Send Message
             </Button>
           </Form.Item>
         </Form>
