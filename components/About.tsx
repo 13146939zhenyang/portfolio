@@ -5,7 +5,7 @@ import { motion, Variants } from 'framer-motion'
 
 const About = () => {
   const item = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0},
     show: { opacity: 1 }
   }
   return (
