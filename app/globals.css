@@ -62,3 +62,6 @@ html {
   top: 10px;
   z-index: -1;
 }
+.ant-input:focus, .ant-input-focused {
+  box-shadow: none !important;
+}
