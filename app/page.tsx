@@ -10,12 +10,12 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 0.5
+        delayChildren: 1.5
       }
     }
   }
   return (
-    <main className='w-full h-full relative overflow-scroll'>
+    <main className='w-full h-full relative'>
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden -z-30'>
         <video autoPlay muted loop className="w-full h-full object-cover">
           <source src="/water.mp4" type="video/mp4" />
@@ -29,10 +29,10 @@ export default function Home() {
       <div className='h-full overflow-scroll w-full pl-[40%] z-50' id='container' ref={scrollRef}>
         <Introduction />
         <motion.div
-          // initial="hidden"
-          // whileInView="visible"
           variants={container}
-          viewport={{ once: false, amount: 0.8, root: scrollRef }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ root: scrollRef, margin: '300px' }}
         >
           <About />
         </motion.div>
