@@ -22,8 +22,8 @@ export default function Home() {
         </video>
       </div>
       <div className='bg-[#1f1f1f] absolute top-0 left-0 w-full h-full bg-opacity-80 -z-20'>
-        </div>
-      <div className='h-full flex items-center absolute z-50'>
+      </div>
+      <div className='h-full flex items-center absolute z-50 md:ml-5'>
         <DeveloperCard />
       </div>
       <div className='h-full overflow-scroll w-full pl-[40%] z-50' id='container' ref={scrollRef}>
