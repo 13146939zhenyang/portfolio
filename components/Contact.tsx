@@ -34,7 +34,7 @@ const Contact = () => {
           <span className='uppercase font-[250]'>Contact</span>
         </div>
         <div className='cursor-default'>
-          <h3 className='text-5xl leading-[60px] font-light mb-8'>Let's Work<span className='text-[#58EA8B]'> Together!</span></h3>
+          <h3 className='text-5xl leading-[60px] font-light mb-8'>Let&apos;s Work<span className='text-[#58EA8B]'> Together!</span></h3>
           <a href='mailto:zhen.yang.syd@gmail.com' className='text-2xl mb-[50px] hover:text-[#58EA8B] transition-all duration-75 ease-in-out'>zhen.yang.syd@gmail.com</a>
         </div>
         <Form
