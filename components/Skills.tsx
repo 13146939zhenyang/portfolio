@@ -96,12 +96,6 @@ const Skills = () => {
                 </motion.div>
             </motion.div>
             <div className='w-full flex flex-row flex-wrap gap-5 max-w-[800px]'>
-                {/* {skills.map((skill, index) => (
-                    <div key={index} className='w-[100px] h-[100px] border-[2px] border-[#999999] hover:border-[#58EA8B] hover:bg-[#1f1f1f] rounded-3xl flex flex-col justify-center items-center gap-2 p-1 cursor-pointer transition-all duration-[0.3] ease-in-out text-[#999999] hover:text-white'>
-                        <skill.icon className='text-[#58EA8B] text-3xl' />
-                        <span className='text-sm text-center'>{skill.title}</span>
-                    </div>
-                ))} */}
             </div>
         </div>
     )
