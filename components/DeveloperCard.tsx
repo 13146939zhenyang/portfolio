@@ -4,6 +4,7 @@ import { Avatar } from '@/public'
 import { BsEnvelope } from 'react-icons/bs'
 import { socialMediaLinks } from '@/utils/constants'
 import { Logo } from '@/components'
+import { motion } from "framer-motion";
 
 const DeveloperCard = () => {
   return (
@@ -49,7 +50,15 @@ const DeveloperCard = () => {
       </div>
       {/* Hire me button */}
       <div className='w-full flex flex-row justify-center gap-1'>
-        <button className='bg-[#58EA8B] w-full rounded-full text-black flex items-center justify-center gap-2 py-3 border-[1px] hover:text-[#58EA8B] border-[#58EA8B] hover:bg-transparent transition-all duration-150 ease-in-out'><BsEnvelope />HIRE ME!</button>
+        <motion.button
+          className='bg-[#58EA8B] w-full rounded-full text-black flex items-center justify-center gap-2 py-3 border-[1px] hover:text-[#58EA8B] border-[#58EA8B] hover:bg-transparent transition-all duration-150 ease-in-out box'
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 8 }}
+        >
+
+          <BsEnvelope />HIRE ME!
+        </motion.button>
       </div>
     </div>
   )

@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { BsBriefcase } from 'react-icons/bs'
 

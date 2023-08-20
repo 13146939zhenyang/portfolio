@@ -1,5 +1,4 @@
-'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsArrowDown } from 'react-icons/bs'
 import { Project } from '@/public'

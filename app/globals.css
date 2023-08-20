@@ -48,6 +48,7 @@ html {
   top: 7px;
   transition: .3s;
 }
+
 .resume-item:hover::before {
   background: #28e98c;
 }
@@ -62,6 +63,17 @@ html {
   top: 10px;
   z-index: -1;
 }
-.ant-input:focus, .ant-input-focused {
+
+.ant-input:focus,
+.ant-input-focused {
   box-shadow: none !important;
+}
+
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input {
+  border-color: #00000000 !important;
+}
+
+.ant-form-item .ant-form-item-explain,
+.ant-form-item .ant-form-item-extra {
+  padding-left: 13px;
 }

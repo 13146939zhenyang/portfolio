@@ -1,10 +1,15 @@
 'use client'
 import React from 'react'
 import { AiOutlineUser } from 'react-icons/ai'
+import { motion, Variants } from 'framer-motion'
 
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 }
+}
 const About = () => {
   return (
-    <div className='w-full text-white py-[70px]' id='about'>
+    <motion.div className='w-full text-white py-[70px]' id='about'>
       {/* tag section */}
       <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
         <AiOutlineUser className="mb-[2px] text-sm" />
@@ -28,7 +33,7 @@ const About = () => {
           I&apos;m quietly confident, naturally curious, and perpetually working on improving my chopsone design problem at a time.
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -1,7 +1,8 @@
-'use client'
+
 import React from 'react'
 import { BsEnvelope } from 'react-icons/bs'
 import { Form, Input, Button, ConfigProvider } from 'antd'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
   const onFinish = (values: any) => {
@@ -24,7 +25,10 @@ const Contact = () => {
             colorPrimary: '#00000000',
             colorBorder: '#00000000',
             colorPrimaryHover: '#00000000',
-            colorWarning: '#00000000',
+            colorWarning: 'black',
+            colorWarningBorder: 'black',
+            colorWarningOutline: 'black',
+            colorWarningBorderHover: 'black',
             boxShadow: 'none',
             boxShadowSecondary: 'none',
             colorTextPlaceholder: '#999999',
@@ -38,7 +42,7 @@ const Contact = () => {
           <BsEnvelope className="mb-[2px] text-sm" />
           <span className='uppercase font-[250]'>Contact</span>
         </div>
-        <div className='cursor-default mb-[60px]'>
+        <div className='cursor-default mb-[60px] pl-[13px]'>
           <h3 className='text-5xl leading-[60px] font-light mb-8'>Let&apos;s Work<span className='text-[#58EA8B]'> Together!</span></h3>
           <a href='mailto:zhen.yang.syd@gmail.com' className='text-2xl mb-[50px] hover:text-[#58EA8B] transition-all duration-75 ease-in-out'>zhen.yang.syd@gmail.com</a>
         </div>
@@ -52,16 +56,16 @@ const Contact = () => {
         >
           <div className='w-full flex sm:flex-row flex-col mb-[34px]'>
             <div className='sm:w-[1/2] w-full'>
-              <div className='text-xs pb-[2px] text-white'>Full name <span className='text-[#fc4545]'>*</span></div>
+              <div className='text-xs pb-[2px] text-white pl-3 uppercase'>Full name <span className='text-[#fc4545]'>*</span></div>
               <Form.Item
                 name="fullname"
                 rules={[{ required: true, message: 'Please input your full name!' }]}
               >
-                <Input className='bg-transparent text-white pl-0' placeholder='Your Full Name' />
+                <Input className='bg-transparent text-white' placeholder='Your Full Name' />
               </Form.Item>
             </div>
             <div className='sm:w-[1/2] w-full'>
-              <div className='text-xs pb-[2px] text-white'>Email <span className='text-[#fc4545]'>*</span></div>
+              <div className='text-xs pb-[2px] text-white pl-3 uppercase'>Email <span className='text-[#fc4545]'>*</span></div>
               <Form.Item
                 name="email"
                 rules={[{ required: true, message: 'Please input your email!' }]}
@@ -72,7 +76,7 @@ const Contact = () => {
           </div>
           <div className='w-full flex sm:flex-row flex-col mb-[34px]'>
             <div className='sm:w-[1/2] w-full'>
-              <div className='text-xs pb-[2px] text-white'>Phone <span className='text-[#fc4545]'>(optional)</span></div>
+              <div className='text-xs pb-[2px] text-white pl-3 uppercase'>Phone <span className='text-[#fc4545]'>(optional)</span></div>
               <Form.Item
                 name="phone"
               >
@@ -80,7 +84,7 @@ const Contact = () => {
               </Form.Item>
             </div>
             <div className='sm:w-[1/2] w-full'>
-              <div className='text-xs pb-[2px] text-white'>Subject <span className='text-[#fc4545]'>*</span></div>
+              <div className='text-xs pb-[2px] text-white pl-3 uppercase'>Subject <span className='text-[#fc4545]'>*</span></div>
               <Form.Item
                 name="subject"
                 rules={[{ required: true, message: 'Please input your subject!' }]}
@@ -90,7 +94,7 @@ const Contact = () => {
             </div>
           </div>
           <div className='w-full mb-[34px]'>
-            <div className='text-xs pb-[2px] text-white'>Message <span className='text-[#fc4545]'>*</span></div>
+            <div className='text-xs pb-[2px] text-white pl-3 uppercase'>Message <span className='text-[#fc4545]'>*</span></div>
             <Form.Item
               name="message"
               rules={[{ required: true, message: 'Please input your message!' }]}
@@ -99,9 +103,12 @@ const Contact = () => {
             </Form.Item>
           </div>
           <Form.Item>
-            <Button htmlType="submit" className='bg-[#58EA8B] hover:bg-transparent w-[243px] h-[52px] text-base uppercase rounded-full'>
+            <motion.button className='bg-[#58EA8B] hover:bg-transparent w-[243px] h-[52px] text-base uppercase rounded-full border-[1px] border-[#58EA8B] transition-all duration-150 ease-in-out hover:text-[#58EA8B]'
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 8 }}>
               Send Message
-            </Button>
+            </motion.button>
           </Form.Item>
         </Form>
       </div>
