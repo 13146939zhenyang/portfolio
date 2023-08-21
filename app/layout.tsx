@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Logo } from '@/components'
+import { Zy } from '@/public'
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -9,6 +9,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Zhen Yang - Fullstack Developer',
   description: 'Fullstack Developer based in sydney, Australia',
+  icons: [Zy.src],
 }
 
 export default function RootLayout({
