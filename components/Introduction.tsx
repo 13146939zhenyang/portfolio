@@ -2,6 +2,7 @@ import React from 'react'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsArrowDown } from 'react-icons/bs'
 import { Project } from '@/public'
+import { motion } from 'framer-motion'
 
 const Introduction = () => {
   const handleClick = () => {
@@ -10,7 +11,17 @@ const Introduction = () => {
     container?.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
   }
   return (
-    <div className='text-white h-screen w-full pt-[70px]' id='introduction'>
+    <motion.div
+      className='text-white h-screen w-full pt-[70px]' id='introduction'
+      animate={{ x: "100%" }}
+      initial={{ x: "calc(100vw - 50%)" }}
+      transition={{
+        duration: 1,
+        type: "spring",
+        stiffness: 50,
+        damping: 20
+      }}
+    >
       {/* tag section */}
       <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
         <AiOutlineHome className="mb-[2px] text-sm" />
@@ -53,7 +64,7 @@ const Introduction = () => {
           </span>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

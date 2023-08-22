@@ -10,7 +10,7 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 1.5
+        delayChildren: 0.2
       }
     }
   }

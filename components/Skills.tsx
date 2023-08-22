@@ -25,7 +25,7 @@ const Square = ({ active, setActive, colIndex, rowIndex, x, y, skill }: any) => 
         <motion.div
             drag
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-            dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
+            dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
             dragElastic={1}
             onDragStart={() => setActive({ row: rowIndex, col: colIndex })}
             style={{
@@ -64,7 +64,7 @@ const Skills = () => {
             <motion.div
                 animate={{ "--base-hue": 360 } as any}
                 initial={{ "--base-hue": 0 } as any}
-                transition={{ duration: 10, loop: Infinity, ease: "linear" }}
+                transition={{ duration:1, loop: Infinity, ease: "linear" }}
                 className='w-full h-[1300px] flex flex-row flex-wrap gap-5 max-w-[800px]'
             >
                 <motion.div
