@@ -3,6 +3,7 @@ import { AiOutlineHome } from 'react-icons/ai'
 import { BsArrowDown } from 'react-icons/bs'
 import { Project } from '@/public'
 import { motion } from 'framer-motion'
+import { fadeIn, textVariant } from "@/utils/motion";
 
 const Introduction = () => {
   const handleClick = () => {
@@ -13,14 +14,9 @@ const Introduction = () => {
   return (
     <motion.div
       className='text-white h-screen w-full pt-[70px]' id='introduction'
-      animate={{ x: "100%" }}
-      initial={{ x: "calc(100vw - 50%)" }}
-      transition={{
-        duration: 1,
-        type: "spring",
-        stiffness: 50,
-        damping: 20
-      }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
     >
       {/* tag section */}
       <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
@@ -28,11 +24,11 @@ const Introduction = () => {
         <span className='uppercase font-[250]'>Introduce</span>
       </div>
       {/* title */}
-      <div className='flex flex-col mb-[43px] text-[78px] font-[300] leading-none gap-4 tracking-normal'>
+      <motion.div className='flex flex-col mb-[43px] text-[78px] font-[300] leading-none gap-4 tracking-normal'>
         <h1 className=''>Say Hi from <span className='text-[#58EA8B]'>Zhen</span></h1>
-        <p>WebFlow designer</p>
-        <p>& Fullstack developer</p>
-      </div>
+        <motion.p variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}>WebFlow designer</motion.p>
+        <motion.p variants={fadeIn("right", "spring", 2 * 0.5, 0.75)}>& Fullstack developer</motion.p>
+      </motion.div>
       {/* slogan */}
       <p className='w-full flex flex-col text-base text-[#999999] mb-[31px]'>
         <span>I design and code beautifully simple things and i love what i do.</span>

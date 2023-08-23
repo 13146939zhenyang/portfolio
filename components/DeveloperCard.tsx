@@ -37,15 +37,44 @@ const DeveloperCard = () => {
       {/* social link */}
       <div className='w-full flex flex-row justify-center gap-3 mb-[30px]'>
         {socialMediaLinks.map((link, index) => (
-          <a
+        //   <motion.div
+        //   animate={{
+        //     scale: [1, 2, 2, 1, 1],
+        //     rotate: [0, 0, 180, 180, 0],
+        //     borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+        //   }}
+        //   transition={{
+        //     duration: 2,
+        //     ease: "easeInOut",
+        //     times: [0, 0.2, 0.5, 0.8, 1],
+        //     repeat: Infinity,
+        //     repeatDelay: 1
+        //   }}
+        //   className="w-[220px] h-[220px] bg-white"
+        // ></motion.div>
+          <motion.a
             key={index}
             href={link.url}
             target='_blank'
             rel='noreferrer'
             className='w-[50px] h-[50px] rounded-full text-[#999999] border-[2px] border-[#565656] flex items-center justify-center hover:text-[#58EA8B] hover:border-[#58EA8B] transition-all duration-150 ease-in-out'
+            // animate={{
+            //   scale: [1, 1.2, 1.2, 1, 1],
+            //   rotate: [0, 0, 180, 180, 0],
+            //   borderRadius: ["30%", "30%", "50%", "50%", "30%"]
+            // }}
+            // transition={{
+            //   duration: 1,
+            //   ease: "easeInOut",
+            //   times: [0, 0.5, 0.5, 0.8, 1.5],
+            //   repeat: Infinity,
+            //   repeatDelay: index * 2
+            // }}
+            whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
           >
             <link.icon />
-          </a>
+          </motion.a>
         ))}
       </div>
       {/* Hire me button */}
