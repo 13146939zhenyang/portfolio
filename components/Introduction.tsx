@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsArrowDown } from 'react-icons/bs'
 import { Project } from '@/public'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { fadeIn, textVariant } from "@/utils/motion";
 
 const Introduction = () => {
@@ -14,9 +14,6 @@ const Introduction = () => {
   return (
     <motion.div
       className='text-white h-screen w-full pt-[70px]' id='introduction'
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
     >
       {/* tag section */}
       <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
@@ -24,7 +21,13 @@ const Introduction = () => {
         <span className='uppercase font-[250]'>Introduce</span>
       </div>
       {/* title */}
-      <motion.div className='flex flex-col mb-[43px] text-[78px] font-[300] leading-none gap-4 tracking-normal'>
+      <motion.div className='flex flex-col mb-[43px] text-[78px] font-[300] leading-none gap-4 tracking-normal' initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={
+        {
+          delay: 0.5,
+          duration: 0.5,
+          ease: 'easeInOut'
+        }
+      }>
         <h1 className=''>Say Hi from <span className='text-[#58EA8B]'>Zhen</span></h1>
         <motion.p variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}>WebFlow designer</motion.p>
         <motion.p variants={fadeIn("right", "spring", 2 * 0.5, 0.75)}>& Fullstack developer</motion.p>
@@ -65,3 +68,18 @@ const Introduction = () => {
 }
 
 export default Introduction
+{/* <AnimatePresence>
+{
+  selectSection === 'news' && (
+    <motion.div
+      initial={{ x: '-200%' }}
+      animate={{ x: '0%' }}
+      transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.7 }}
+      exit={{ x: '-200%' }}
+      className='h-[1000px]'
+    >
+      <News />
+    </motion.div>
+  )
+}
+</AnimatePresence > */}

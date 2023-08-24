@@ -1,19 +1,8 @@
 'use client'
-import { useRef, useEffect, useState } from 'react'
 import { Introduction, About, Contact, DeveloperCard, Portfolio, Resume, Skills, SideNav } from '@/components'
 import { motion } from 'framer-motion'
 
 export default function Home() {
-  const scrollRef = useRef(null)
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2
-      }
-    }
-  }
   return (
     <main className='w-full h-full relative'>
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden -z-30'>
@@ -26,13 +15,16 @@ export default function Home() {
       <div className='h-full flex items-center absolute z-50 md:ml-5'>
         <DeveloperCard />
       </div>
-      <div className='h-full overflow-scroll w-full pl-[40%] z-50' id='container' ref={scrollRef}>
+      <div className='h-full overflow-scroll w-full pl-[40%] z-50'>
         <Introduction />
         <motion.div
-          variants={container}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ root: scrollRef, margin: '300px' }}
+          transition={{
+            delay: 0.5,
+            duration: 0.5,
+            ease: 'easeInOut'
+          }}
         >
           <About />
         </motion.div>
