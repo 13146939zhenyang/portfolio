@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Portfolio = () => {
   return (
-    <div className='w-full h-screen text-white pt-[70px] pl-[40%]' id='portfolio'>
+    <div className='w-full text-white pt-[70px] pl-[40%]' id='portfolio'>
       <motion.div
         className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'
         initial={{ x: -300, opacity: 1, scale: 0 }}
@@ -29,7 +29,41 @@ const Portfolio = () => {
         </motion.h3>
       </div>
       {/* project 1 */}
-      
+      <div className='mb-16'>
+        <div className='w-[770px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
+        <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Edgecademy - Education Social Media Platform</div>
+      </div>
+      {/* project 2 & 3 */}
+      <div className='mb-16 flex flex-row items-center justify-start gap-6'>
+        {/* p2 */}
+        <div className=''>
+          <div className='w-[373px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
+          <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Edge Quant</div>
+        </div>
+        {/* p3 */}
+        <div className=''>
+          <div className='w-[373px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
+          <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>ReiIzakaya - Japanese Restaurant</div>
+        </div>
+      </div>
+      {/* project 4 */}
+      <div className='mb-16'>
+        <div className='w-[770px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
+        <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>JR Academy - Professional IT Education Company</div>
+      </div>
+      {/* project 5 & 6 */}
+      <div className='mb-16 flex flex-row items-center justify-start gap-6'>
+        {/* p5 */}
+        <div className=''>
+          <div className='w-[373px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
+          <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Beaver Capital</div>
+        </div>
+        {/* p6 */}
+        <div className=''>
+          <div className='w-[373px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
+          <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>AirLinking</div>
+        </div>
+      </div>
     </div>
   )
 }
