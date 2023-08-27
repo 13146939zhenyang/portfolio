@@ -15,10 +15,10 @@ import { MdEnhancedEncryption } from 'react-icons/md'
 import { RiReactjsLine } from 'react-icons/ri'
 
 export const socialMediaLinks = [
-    { title: 'Instagram', url: 'https://www.instagram.com/', icon: BsInstagram },
+    { title: 'Instagram', url: 'https://www.instagram.com/walking500miles/', icon: BsInstagram },
     { title: 'Twitter', url: 'https://twitter.com/', icon: BsTwitter },
-    { title: 'LinkedIn', url: 'https://www.linkedin.com/', icon: BsLinkedin },
-    { title: 'Github', url: 'https://www.facebook.com/', icon: BsGithub },
+    { title: 'LinkedIn', url: 'https://www.linkedin.com/in/kitchenassassin/', icon: BsLinkedin },
+    { title: 'Github', url: 'https://github.com/zhen-yang-syd', icon: BsGithub },
 ]
 
 export const sideNavItems = [
