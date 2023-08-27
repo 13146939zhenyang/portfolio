@@ -10,7 +10,7 @@ export default function Home() {
   //   console.log("Page scroll: ", latest)
   // })
   return (
-    <main className='w-screen h-screen relative' id="container">
+    <main className='w-screen h-screen relative overflow-x-hidden' id="container">
       <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-30'>
         <video autoPlay muted loop className="w-full h-full object-cover">
           <source src="/water.mp4" type="video/mp4" />
@@ -18,7 +18,7 @@ export default function Home() {
       </div>
       <div className='bg-[#1f1f1f] fixed top-0 left-0 w-full h-full bg-opacity-80 -z-20'>
       </div>
-      <div className='h-full flex items-center fixed z-50 md:ml-5'>
+      <div className='h-full flex items-center sm:fixed z-50 md:ml-5'>
         <DeveloperCard />
       </div>
       <div className='fixed h-full right-[70px] top-0 flex items-center z-50'>

@@ -83,7 +83,7 @@ const DeveloperCard = () => {
           className='bg-[#58EA8B] w-full rounded-full text-black flex items-center justify-center gap-2 py-3 border-[1px] hover:text-[#58EA8B] border-[#58EA8B] hover:bg-transparent transition-all duration-150 ease-in-out box'
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 8 }}
+          transition={{ duration: 0.2, type: "spring", stiffness: 200, damping: 8 }}
         >
 
           <BsEnvelope />HIRE ME!

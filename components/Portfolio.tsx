@@ -28,6 +28,8 @@ const Portfolio = () => {
           Featured<span className='text-[#58EA8B]'> Projects</span>
         </motion.h3>
       </div>
+      {/* project 1 */}
+      
     </div>
   )
 }

@@ -10,8 +10,7 @@ import { useRef } from 'react'
 const Introduction = ({ wrapper }: any) => {
   const handleClick = () => {
     const element = document.getElementById('portfolio')
-    const container = document.getElementById('container');
-    container?.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
+    window.scrollTo({ top: element?.offsetTop! - 15 || 0, behavior: 'smooth' })
   }
   const ref = useRef(null);
   const { scrollY } = useScroll({
