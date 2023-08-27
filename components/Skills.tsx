@@ -53,7 +53,7 @@ const Skills = () => {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
     return (
-        <div className='w-full text-white pt-[70px]' id='skills'>
+        <div className='w-full text-white pt-[70px] pl-[40%]' id='skills'>
             <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
                 <LiaShapesSolid className="mb-[2px] text-sm" />
                 <span className='uppercase font-[250]'>Skills</span>

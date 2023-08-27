@@ -1,11 +1,24 @@
 'use client'
-import React from 'react'
 import { AiOutlineUser } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <motion.div className='w-full text-white py-[70px]' id='about'>
+    <motion.div className='w-full text-white pl-[40%] py-[70px]' id='about' 
+    initial={{
+      opacity: 0
+    }}
+    whileInView={{
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8,
+        delay: 2
+      }
+    }}
+    viewport={{ margin: '0px 0px' }}
+    >
       {/* tag section */}
       <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
         <AiOutlineUser className="mb-[2px] text-sm" />
