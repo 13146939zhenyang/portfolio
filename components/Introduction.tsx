@@ -30,7 +30,7 @@ const Introduction = ({ wrapper }: any) => {
         whileInView={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
         exit={{ x: 300, opacity: 0, scale: 0.5 }}
-        viewport={{ margin: '-90px 0px' }}
+        viewport={{ margin: '0px 0px' }}
       >
         <AiOutlineHome className="mb-[2px] text-sm" />
         <motion.span

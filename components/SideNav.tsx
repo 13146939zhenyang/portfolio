@@ -9,12 +9,11 @@ const SideNav = () => {
     const handleClick = (value: string) => {
         setSelected(value)
         const element = document.getElementById(`${value}`)
-        const container = document.getElementById('container');
         if (value === 'introduction') {
-            container?.scrollTo({ top: element?.offsetTop! - 70 || 0, behavior: 'smooth' })
+            window.scrollTo({ top: element?.offsetTop! - 70 || 0, behavior: 'smooth' })
         }
         else {
-            container?.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
+            window.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
         }
     }
     const [scrolled, setScrolled] = useState<boolean>(false)
@@ -28,38 +27,38 @@ const SideNav = () => {
             const skills = document.getElementById('skills')
             const portfolio = document.getElementById('portfolio')
             const contact = document.getElementById('contact')
-            if (container?.scrollTop! > 0) {
+            if (window.scrollY > 0) {
                 setScrolled(true)
             }
             else {
                 setSelected('introduction')
                 setScrolled(false)
             }
-            if (container?.scrollTop! > about?.offsetTop! - 100) {
+            if (window.scrollY > about?.offsetTop! - 100) {
                 setSelected('about')
             }
-            if (container?.scrollTop! > resume?.offsetTop! - 100) {
+            if (window.scrollY > resume?.offsetTop! - 100) {
                 setSelected('resume')
             }
-            if (container?.scrollTop! > skills?.offsetTop! - 100) {
+            if (window.scrollY > skills?.offsetTop! - 100) {
                 setSelected('skills')
             }
-            if (container?.scrollTop! > portfolio?.offsetTop! - 100) {
+            if (window.scrollY > portfolio?.offsetTop! - 100) {
                 setSelected('portfolio')
             }
-            if (container?.scrollTop! > contact?.offsetTop! - 100) {
+            if (window.scrollY > portfolio?.offsetTop! + 200) {
                 setSelected('contact')
             }
         }
 
-        container?.addEventListener('scroll', handleScroll)
-        return () => container?.removeEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
     }, [])
     return (
         <div className='border-[1px] border-[#575757] bg-[#1f1f1f] rounded-[30px] flex flex-col py-[24px] gap-[20px] z-20 w-[55px]'>
             {sideNavItems.map((item, index) => (
                 <Tooltip placement="left" title={item.title} key={item.id} className='z-50' color='#404042' destroyTooltipOnHide={true} overlayClassName='px-4 py-2 text-xs' arrow={false}>
-                    <item.icon className={`${selected === item.id ? 'text-[#58EA8B]' : 'text-[#999999]'} w-[18px] h-[18px] mx-auto cursor-pointer hover:text-[#58EA8B] transition-all  ease-in-out`} onClick={() => handleClick(item.id)}/>
+                    <item.icon className={`${selected === item.id ? 'text-[#58EA8B]' : 'text-[#999999]'} w-[18px] h-[18px] mx-auto cursor-pointer hover:text-[#58EA8B] transition-all  ease-in-out`} onClick={() => handleClick(item.id)} />
                 </Tooltip>
             ))}
         </div>

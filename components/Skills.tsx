@@ -60,7 +60,7 @@ const Skills = () => {
                 whileInView={{ x: 0, opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
                 exit={{ x: 300, opacity: 0, scale: 0.5 }}
-                viewport={{ margin: '-100px 0px' }}
+                viewport={{ margin: '0px 0px' }}
             >
                 <LiaShapesSolid className="mb-[2px] text-sm" />
                 <span className='uppercase font-[250]'>Skills</span>

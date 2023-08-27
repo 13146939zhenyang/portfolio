@@ -10,7 +10,7 @@ export default function Home() {
   //   console.log("Page scroll: ", latest)
   // })
   return (
-    <main className='w-screen h-screen relative'>
+    <main className='w-screen h-screen relative' id="container">
       <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-30'>
         <video autoPlay muted loop className="w-full h-full object-cover">
           <source src="/water.mp4" type="video/mp4" />
