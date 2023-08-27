@@ -31,37 +31,37 @@ const Portfolio = () => {
       {/* project 1 */}
       <div className='mb-16'>
         <div className='w-[770px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
-        <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Edgecademy - Education Social Media Platform</div>
+        <a href='https://www.edgecademy.org/' className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Edgecademy - Education Social Media Platform</a>
       </div>
       {/* project 2 & 3 */}
       <div className='mb-16 flex flex-row items-center justify-start gap-6'>
         {/* p2 */}
         <div className=''>
           <div className='w-[373px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
-          <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Edge Quant</div>
+          <a href='https://www.edgequant.com.au/' className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Edge Quant</a>
         </div>
         {/* p3 */}
         <div className=''>
           <div className='w-[373px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
-          <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>ReiIzakaya - Japanese Restaurant</div>
+          <a href='https://reiizakaya.vercel.app/' className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>ReiIzakaya - Japanese Restaurant</a>
         </div>
       </div>
       {/* project 4 */}
       <div className='mb-16'>
         <div className='w-[770px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
-        <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>JR Academy - Professional IT Education Company</div>
+        <a href='https://jiangren.com.au/' className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>JR Academy - Professional IT Education Company</a>
       </div>
       {/* project 5 & 6 */}
       <div className='mb-16 flex flex-row items-center justify-start gap-6'>
         {/* p5 */}
         <div className=''>
           <div className='w-[373px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
-          <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Beaver Capital</div>
+          <a href='https://www.beavercapital.com.au/' className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>Beaver Capital</a>
         </div>
         {/* p6 */}
         <div className=''>
           <div className='w-[373px] h-[410px] mb-[30px] rounded-[30px] shadow-lg'></div>
-          <div className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>AirLinking</div>
+          <a href='https://airlinking.com.au/' className='text-2xl font-light hover:underline underline-offset-1 cursor-pointer'>AirLinking</a>
         </div>
       </div>
     </div>
