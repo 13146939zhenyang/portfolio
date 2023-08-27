@@ -30,7 +30,7 @@ const Introduction = ({ wrapper }: any) => {
         whileInView={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
         exit={{ x: 300, opacity: 0, scale: 0.5 }}
-        viewport={{ margin: '-50px 0px' }}
+        viewport={{ margin: '-90px 0px' }}
       >
         <AiOutlineHome className="mb-[2px] text-sm" />
         <motion.span
@@ -47,20 +47,20 @@ const Introduction = ({ wrapper }: any) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.1 }}
-            viewport={{ margin: '-80px 0px' }}
+            viewport={{ margin: '-120px 0px' }}
           >
             Say Hi from
           </motion.span>
           <motion.span className='text-[#58EA8B]' initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.3 }}
-            viewport={{ margin: '-80px 0px' }}>{` `}Zhen</motion.span>
+            viewport={{ margin: '-120px 0px' }}>{` `}Zhen</motion.span>
         </div>
         <motion.p
           initial={{ y: -30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.5 }}
-          viewport={{ margin: '-80px 0px' }}
+          viewport={{ margin: '-120px 0px' }}
         >
           WebFlow designer
         </motion.p>
@@ -68,7 +68,7 @@ const Introduction = ({ wrapper }: any) => {
           initial={{ y: -30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.7 }}
-          viewport={{ margin: '-80px 0px' }}
+          viewport={{ margin: '-120px 0px' }}
         >
           & Fullstack developer
         </motion.p>
@@ -79,7 +79,7 @@ const Introduction = ({ wrapper }: any) => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.5 }}
-          viewport={{ margin: '-80px 0px' }}
+          viewport={{ margin: '-120px 0px' }}
         >
           I design and code beautifully simple things and i love what i do.
         </motion.span>
@@ -87,7 +87,7 @@ const Introduction = ({ wrapper }: any) => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.5 }}
-          viewport={{ margin: '-80px 0px' }}>
+          viewport={{ margin: '-120px 0px' }}>
           Just simple like that!
         </motion.span>
       </p>
@@ -97,7 +97,7 @@ const Introduction = ({ wrapper }: any) => {
         initial={{ x: 30, y: 30, opacity: 0 }}
         whileInView={{ x: 0, y: 0, opacity: 1 }}
         transition={{ duration: 1.5, type: 'spring', delay: 0.5 }}
-        viewport={{ margin: '-80px 0px' }}
+        viewport={{ margin: '-120px 0px' }}
       >
         <div className='flex justify-center items-center w-[175px] h-[175px] rounded-full relative border-[1px] border-[#575757] cursor-pointer hover:border-[#58EA8B] hover:text-[#58EA8B] transition-all duration-150 ease-in-out' onClick={handleClick}>
           <img src={Project.src} alt="projcet" className='m-2 w-[141px] h-[148px] spinner absolute' />
@@ -110,8 +110,8 @@ const Introduction = ({ wrapper }: any) => {
           <motion.span
             initial={{ x: -55, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, type: 'spring', delay: 0.5 }}
-            viewport={{ margin: '-80px 0px' }}
+            transition={{ duration: 1.5, type: 'spring', delay: 0.3 }}
+            viewport={{ margin: '-100px 0px' }}
             className='text-[#58EA8B] text-[72px] mb-[38px] leading-[56px]'
           >
             3+
@@ -119,7 +119,7 @@ const Introduction = ({ wrapper }: any) => {
           <motion.span className='uppercase text-sm mb-[16px] text-[#999999] leading-6'
             initial={{ x: -55, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, type: 'spring', delay: 0.5 }}
+            transition={{ duration: 1.5, type: 'spring', delay: 0.3 }}
             viewport={{ margin: '-80px 0px' }}>
             <span className=''>years of</span>
             <br />
@@ -131,15 +131,15 @@ const Introduction = ({ wrapper }: any) => {
             className='text-[#58EA8B] text-[72px] mb-[38px] leading-[56px]'
             initial={{ x: 55, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, type: 'spring', delay: 0.5 }}
-            viewport={{ margin: '-80px 0px' }}
+            transition={{ duration: 1.5, type: 'spring', delay: 0.3 }}
+            viewport={{ margin: '-100px 0px' }}
           >
             8
           </motion.span>
           <motion.span className='uppercase text-sm mb-[16px] text-[#999999] leading-6'
             initial={{ x: 55, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, type: 'spring', delay: 0.5 }}
+            transition={{ duration: 1.5, type: 'spring', delay: 0.3 }}
             viewport={{ margin: '-80px 0px' }}>
             <span className=''>commercial projects</span>
             <br />
