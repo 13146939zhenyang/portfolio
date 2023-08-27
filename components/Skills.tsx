@@ -54,17 +54,32 @@ const Skills = () => {
     const y = useMotionValue(0);
     return (
         <div className='w-full text-white pt-[70px] pl-[40%]' id='skills'>
-            <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
+            <motion.div
+                className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'
+                initial={{ x: -300, opacity: 1, scale: 0 }}
+                whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
+                exit={{ x: 300, opacity: 0, scale: 0.5 }}
+                viewport={{ margin: '-100px 0px' }}
+            >
                 <LiaShapesSolid className="mb-[2px] text-sm" />
                 <span className='uppercase font-[250]'>Skills</span>
-            </div>
+            </motion.div>
             <div className='cursor-default'>
-                <h3 className='text-5xl leading-[60px] font-light mb-8'>My<span className='text-[#58EA8B]'> TechStack</span></h3>
+                <motion.h3
+                    className='block text-5xl leading-[60px] font-light mb-8'
+                    initial={{ y: -80, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.3 }}
+                    viewport={{ margin: '-100px 0px' }}
+                >
+                    My<span className='text-[#58EA8B]'> TechStack</span>
+                </motion.h3>
             </div>
             <motion.div
                 animate={{ "--base-hue": 360 } as any}
                 initial={{ "--base-hue": 0 } as any}
-                transition={{ duration:1, loop: Infinity, ease: "linear" }}
+                transition={{ duration: 1, loop: Infinity, ease: "linear" }}
                 className='w-full h-[1300px] flex flex-row flex-wrap gap-5 max-w-[800px]'
             >
                 <motion.div
