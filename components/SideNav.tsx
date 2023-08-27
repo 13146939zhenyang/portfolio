@@ -10,7 +10,7 @@ const SideNav = () => {
         setSelected(value)
         const element = document.getElementById(`${value}`)
         if (value === 'introduction') {
-            window.scrollTo({ top: element?.offsetTop! - 70 || 0, behavior: 'smooth' })
+            window.scrollTo({ top: element?.offsetTop! || 0, behavior: 'smooth' })
         }
         else {
             window.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
