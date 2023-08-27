@@ -37,14 +37,38 @@ const Contact = () => {
         },
       }}
     >
-      <div className='w-full h-screen text-white pt-[70px] pl-[40%]' id='contact'>
-        <div className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'>
+      <div className='w-full text-white pt-[70px] pl-[40%]' id='contact'>
+        <motion.div
+          className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'
+          initial={{ x: -300, opacity: 1, scale: 0 }}
+          whileInView={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
+          exit={{ x: 300, opacity: 0, scale: 0.5 }}
+          viewport={{ margin: '-100px 0px' }}
+        >
           <BsEnvelope className="mb-[2px] text-sm" />
           <span className='uppercase font-[250]'>Contact</span>
-        </div>
+        </motion.div>
         <div className='cursor-default mb-[60px] pl-[13px]'>
-          <h3 className='text-5xl leading-[60px] font-light mb-8'>Let&apos;s Work<span className='text-[#58EA8B]'> Together!</span></h3>
-          <a href='mailto:zhen.yang.syd@gmail.com' className='text-2xl mb-[50px] hover:text-[#58EA8B] transition-all duration-75 ease-in-out'>zhen.yang.syd@gmail.com</a>
+          <motion.h3
+            className='block text-5xl leading-[60px] font-light mb-8'
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.3 }}
+            viewport={{ margin: '-100px 0px' }}
+          >
+            Let&apos;s Work<span className='text-[#58EA8B]'> Together!</span>
+          </motion.h3>
+          <motion.a
+            href='mailto:zhen.yang.syd@gmail.com'
+            className='block text-2xl mb-[50px] hover:text-[#58EA8B] transition-all duration-75 ease-in-out'
+            initial={{ y: 80, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.3 }}
+            viewport={{ margin: '-100px 0px' }}
+          >
+            zhen.yang.syd@gmail.com
+          </motion.a>
         </div>
         <Form
           name="contact"
