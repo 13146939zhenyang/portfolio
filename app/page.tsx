@@ -1,17 +1,16 @@
 'use client'
-import { useRef } from 'react'
+import { useEffect } from 'react'
 import { Introduction, About, Contact, DeveloperCard, Portfolio, Resume, Skills, SideNav } from '@/components'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
 export default function Home() {
   const { scrollY } = useScroll()
-
   // useMotionValueEvent(scrollY, "change", (latest) => {
   //   console.log("Page scroll: ", latest)
   // })
   return (
-    <main className='w-screen h-screen relative overflow-x-hidden' id="container">
-      <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-30'>
+    <main className='w-full h-full relative overflow-x-clip' id="container">
+      <div className='fixed top-0 left-0 w-full h-full -z-30'>
         <video autoPlay muted loop className="w-full h-full object-cover">
           <source src="/water.mp4" type="video/mp4" />
         </video>
@@ -27,7 +26,7 @@ export default function Home() {
       <Introduction />
       <About />
       <Resume />
-      <Skills />
+      {/* <Skills /> */}
       <Portfolio />
       <Contact />
     </main>

@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`w-screen h-screen ${inter.className}`}>
+      <body className={`${inter.className}`}>
         {children}
       </body>
     </html>

@@ -5,7 +5,6 @@ import { Tooltip } from 'antd'
 
 const SideNav = () => {
     const [selected, setSelected] = useState<string>('introduction')
-    const headerRef = useRef<HTMLDivElement>(null)
     const handleClick = (value: string) => {
         setSelected(value)
         const element = document.getElementById(`${value}`)
@@ -29,6 +28,7 @@ const SideNav = () => {
             const contact = document.getElementById('contact')
             if (window.scrollY > 0) {
                 setScrolled(true)
+                console.log(window.scrollY)
             }
             else {
                 setSelected('introduction')
@@ -51,8 +51,8 @@ const SideNav = () => {
             }
         }
 
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
+        window.addEventListener('wheel', handleScroll)
+        return () => window.removeEventListener('wheel', handleScroll)
     }, [])
     return (
         <div className='border-[1px] border-[#575757] bg-[#1f1f1f] rounded-[30px] flex flex-col py-[24px] gap-[20px] z-20 w-[55px]'>
