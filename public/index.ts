@@ -1,4 +1,10 @@
 import Avatar from './avatar.jpg'
 import Project from './project.png'
 import Zy from './logo-zy.png'
-export { Avatar, Project, Zy }
+import Edgecademy from './edgecademy-dashboard.png'
+import Edgequant from './edgequant.png'
+import Jiangren from './jiangren-dashboard.png'
+import Air from './airlinking.png'
+import Rei from './reiizakaya.png'
+import Beaver from './beavercapital.png'
+export { Avatar, Project, Zy, Edgecademy, Edgequant, Jiangren, Air, Rei, Beaver }
