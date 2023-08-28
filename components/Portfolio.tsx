@@ -6,7 +6,7 @@ import { Edgecademy, Edgequant, Jiangren, Air, Rei, Beaver } from '@/public'
 
 const Portfolio = () => {
   return (
-    <div className='w-screen text-white pt-[70px] pl-[40%]' id='portfolio'>
+    <div className='w-screen text-white sm:pt-[70px] sm:pl-[40%] pl-0 pt-0' id='portfolio'>
       <motion.div
         className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'
         initial={{ x: -300, opacity: 1, scale: 0 }}

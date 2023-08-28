@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div className='w-full text-white pl-[40%] py-[70px]' id='about'
+    <div className='w-full text-white sm:pt-[70px] sm:pl-[40%] pl-0 pt-0' id='about'
     >
       {/* tag section */}
       <motion.div

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const DeveloperCard = () => {
   return (
-    <div className='text-white border-[1px] border-[#565656] rounded-3xl p-[50px] text-base flex flex-col'>
+    <div className='text-white sm:border-[1px] sm:border-[#565656] rounded-3xl pt-[50px] p-[10px] sm:p-[50px] text-base flex flex-col'>
       {/* title section */}
       <div className='w-full flex flex-row justify-between items-center mb-[30px]'>
         <div className='text-5xl font-semibold'>
@@ -26,7 +26,7 @@ const DeveloperCard = () => {
         </p>
       </div>
       {/* avatar section */}
-      <div className='w-[298px] h-[251px] bg-right bg-[length:360px_270px] grayscale mb-[56px] mx-auto rounded-3xl' style={{ backgroundImage: `url(${Avatar.src})` }}></div>
+      <div className='w-[298px] h-[251px] bg-right bg-[length:360px_270px] grayscale sm:mb-[56px] sm:mt-0 sm:mx-auto rounded-3xl m-[20px]' style={{ backgroundImage: `url(${Avatar.src})` }}></div>
       {/* name/location section */}
       <div className='flex flex-col gap-1 mb-[30px] text-center text-2xl font-[300]'>
         <h2 className='mb-[8px]'>zhen.yang.syd@gmail.com</h2>

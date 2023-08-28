@@ -20,7 +20,7 @@ const Introduction = ({ wrapper }: any) => {
   });
   return (
     <motion.div
-      className='text-white w-full pt-[70px] pl-[40%]' id='introduction' ref={ref}
+      className='text-white w-full sm:pt-[70px] sm:pl-[40%] pl-0 pt-0' id='introduction' ref={ref}
     >
       {/* tag section */}
       <motion.div

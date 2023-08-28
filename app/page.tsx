@@ -17,10 +17,10 @@ export default function Home() {
       </div>
       <div className='bg-[#1f1f1f] fixed top-0 left-0 w-full h-full bg-opacity-80 -z-20'>
       </div>
-      <div className='h-full flex items-center sm:fixed z-50 md:ml-5'>
+      <div className='w-full h-full flex sm:justify-start justify-center items-center sm:fixed z-50 md:ml-5'>
         <DeveloperCard />
       </div>
-      <div className='fixed h-full right-[70px] top-0 flex items-center z-50'>
+      <div className='hidden fixed h-full right-[70px] top-0 sm:flex items-center z-50'>
         <SideNav />
       </div>
       <Introduction />
