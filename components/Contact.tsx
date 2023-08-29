@@ -37,9 +37,12 @@ const Contact = () => {
         },
       }}
     >
-      <div className='w-full text-white sm:pt-[70px] sm:pl-[40%] pl-0 pt-0' id='contact'>
+      <div
+        className='text-white w-full pt-[10px] sm:pt-[70px] pl-4 pr-4 sm:pl-[40%] flex flex-col'
+        id='contact'
+      >
         <motion.div
-          className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'
+          className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white hidden justify-center items-center gap-2 text-xs mb-[58px] sm:flex'
           initial={{ x: -300, opacity: 1, scale: 0 }}
           whileInView={{ x: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
@@ -49,9 +52,19 @@ const Contact = () => {
           <BsEnvelope className="mb-[2px] text-sm" />
           <span className='uppercase font-[250]'>Contact</span>
         </motion.div>
-        <div className='cursor-default mb-[60px] pl-[13px]'>
+        <motion.div
+          className='w-[130px] h-[30px] border-[1px] border-[#565656] rounded-full text-white sm:hidden justify-center items-center gap-2 text-xs mb-[38px] flex'
+          initial={{ x: 30, opacity:0 }}
+          whileInView={{ x: 0, opacity:1 }}
+          transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
+          viewport={{ margin: '0px 0px' }}
+        >
+          <BsEnvelope className="mb-[2px] text-sm" />
+          <span className='uppercase font-[250]'>Contact</span>
+        </motion.div>
+        <div className='cursor-default mb-[20px] sm:mb-[60px] pl-[13px]'>
           <motion.h3
-            className='block text-5xl leading-[60px] font-light mb-8'
+            className='block text-2xl sm:text-5xl leading-none sm:leading-[60px] font-light mb-2 sm:mb-8'
             initial={{ y: 80, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.3 }}
@@ -61,7 +74,7 @@ const Contact = () => {
           </motion.h3>
           <motion.a
             href='mailto:zhen.yang.syd@gmail.com'
-            className='block text-2xl mb-[50px] hover:text-[#58EA8B] transition-all duration-75 ease-in-out'
+            className='block text-sm sm:text-2xl mb-[20px] sm:mb-[50px] hover:text-[#58EA8B] transition-all duration-75 ease-in-out'
             initial={{ y: 80, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.5, type: 'spring', bounce: 0.2, delay: 0.3 }}
@@ -78,7 +91,7 @@ const Contact = () => {
           autoComplete="off"
           className='flex flex-col'
         >
-          <div className='w-full flex sm:flex-row flex-col mb-[34px]'>
+          <div className='w-full flex sm:flex-row flex-col mb-0 sm:mb-[34px]'>
             <div className='sm:w-[1/2] w-full'>
               <div className='text-xs pb-[2px] text-white pl-3 uppercase'>Full name <span className='text-[#fc4545]'>*</span></div>
               <Form.Item
@@ -126,7 +139,7 @@ const Contact = () => {
               <Input.TextArea className='bg-transparent text-white' placeholder='Write your message here...' />
             </Form.Item>
           </div>
-          <Form.Item>
+          <Form.Item className='w-screen flex sm:justify-start justify-center'>
             <motion.button className='bg-[#58EA8B] hover:bg-transparent w-[243px] h-[52px] text-base uppercase rounded-full border-[1px] border-[#58EA8B] transition-all duration-150 ease-in-out hover:text-[#58EA8B]'
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
