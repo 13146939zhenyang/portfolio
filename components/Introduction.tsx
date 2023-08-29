@@ -20,15 +20,27 @@ const Introduction = ({ wrapper }: any) => {
   });
   return (
     <motion.div
-      className='text-white w-full sm:pt-[70px] sm:pl-[40%] pl-0 pt-0' id='introduction' ref={ref}
+      className='text-white w-full pt-[10px] sm:pt-[70px] pl-4 pr-4 sm:pl-[40%] flex flex-col' id='introduction' ref={ref}
     >
       {/* tag section */}
       <motion.div
-        className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'
+        className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white hidden justify-center items-center gap-2 text-xs mb-[58px] sm:flex'
         initial={{ x: -300, opacity: 1, scale: 0 }}
         whileInView={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
-        exit={{ x: 300, opacity: 0, scale: 0.5 }}
+        viewport={{ margin: '0px 0px' }}
+      >
+        <AiOutlineHome className="mb-[2px] text-sm" />
+        <motion.span
+        >
+          Introduce
+        </motion.span>
+      </motion.div>
+      <motion.div
+        className='w-[100px] h-[30px] border-[1px] border-[#565656] rounded-full text-white sm:hidden justify-center items-center gap-2 text-xs mb-[38px] flex'
+        initial={{ x: 30, opacity:0 }}
+        whileInView={{ x: 0, opacity:1 }}
+        transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
         viewport={{ margin: '0px 0px' }}
       >
         <AiOutlineHome className="mb-[2px] text-sm" />
@@ -39,7 +51,7 @@ const Introduction = ({ wrapper }: any) => {
       </motion.div>
       {/* title */}
       <motion.div
-        className='flex flex-col mb-[43px] text-[78px] font-[300] leading-none gap-4 tracking-normal'
+        className='flex flex-col mb-[43px] text-4xl sm:text-[78px] font-[300] leading-none gap-4 tracking-normal'
       >
         <div>
           <motion.span
@@ -73,7 +85,7 @@ const Introduction = ({ wrapper }: any) => {
         </motion.p>
       </motion.div>
       {/* slogan */}
-      <p className='w-full flex flex-col text-base text-[#999999] mb-[31px]'>
+      <p className='w-full flex flex-col text-xs sm:text-base text-[#999999] mb-[31px]'>
         <motion.span
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -92,30 +104,31 @@ const Introduction = ({ wrapper }: any) => {
       </p>
       {/* ads circle */}
       <motion.div
-        className='w-full flex justify-start pl-[500px]'
+        className='w-full flex justify-center sm:justify-start sm:pl-[500px]'
         initial={{ x: 30, y: 30, opacity: 0 }}
         whileInView={{ x: 0, y: 0, opacity: 1 }}
         transition={{ duration: 1.5, type: 'spring', delay: 0.5 }}
         viewport={{ margin: '-120px 0px' }}
       >
-        <div className='flex justify-center items-center w-[175px] h-[175px] rounded-full relative border-[1px] border-[#575757] cursor-pointer hover:border-[#58EA8B] hover:text-[#58EA8B] transition-all duration-150 ease-in-out' onClick={handleClick}>
-          <img src={Project.src} alt="projcet" className='m-2 w-[141px] h-[148px] spinner absolute' />
+        <div className='flex justify-center items-center sm:w-[175px] sm:h-[175px] w-[95px] h-[95px] rounded-full relative border-[1px] border-[#575757] cursor-pointer hover:border-[#58EA8B] hover:text-[#58EA8B] transition-all duration-150 ease-in-out' onClick={handleClick}>
+          <img src={Project.src} alt="projcet" className='m-2 sm:w-[141px] sm:h-[148px] w-[75px] h-[78px] spinner absolute' />
           <BsArrowDown className="text-3xl font-bold animate-bounce" />
         </div>
       </motion.div>
       {/* number of experience and projects */}
-      <div className='mt-[55px] flex flex-row items-center gap-[100px]'>
+      <div className='mt-[30px] sm:mt-[55px] flex flex-row items-center sm:gap-[100px] sm:justify-start justify-evenly'>
         <div className='flex flex-col'>
           <motion.span
             initial={{ x: -55, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 1.5, type: 'spring', delay: 0.3 }}
             viewport={{ margin: '-100px 0px' }}
-            className='text-[#58EA8B] text-[72px] mb-[38px] leading-[56px]'
+            className='text-[#58EA8B] text-5xl sm:text-[72px] mb-[10px] sm:mb-[38px] leading-none sm:leading-[56px] text-center'
           >
             3+
           </motion.span>
-          <motion.span className='uppercase text-sm mb-[16px] text-[#999999] leading-6'
+          <motion.span 
+          className='uppercase text-xs sm:text-sm mb-[16px] text-[#999999] sm:leading-6 text-center'
             initial={{ x: -55, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 1.5, type: 'spring', delay: 0.3 }}
@@ -127,7 +140,7 @@ const Introduction = ({ wrapper }: any) => {
         </div>
         <div className='flex flex-col'>
           <motion.span
-            className='text-[#58EA8B] text-[72px] mb-[38px] leading-[56px]'
+            className='text-[#58EA8B] text-5xl sm:text-[72px] mb-[10px] sm:mb-[38px] leading-none sm:leading-[56px] text-center'
             initial={{ x: 55, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 1.5, type: 'spring', delay: 0.3 }}
@@ -135,7 +148,8 @@ const Introduction = ({ wrapper }: any) => {
           >
             8
           </motion.span>
-          <motion.span className='uppercase text-sm mb-[16px] text-[#999999] leading-6'
+          <motion.span 
+          className='uppercase text-xs sm:text-sm mb-[16px] text-[#999999] sm:leading-6 text-center'
             initial={{ x: 55, y: 30, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 1.5, type: 'spring', delay: 0.3 }}

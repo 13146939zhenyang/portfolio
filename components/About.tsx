@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div className='w-full text-white sm:pt-[70px] sm:pl-[40%] pl-0 pt-0' id='about'
+    <div className='text-white w-full pt-[10px] sm:pt-[70px] pl-4 pr-4 sm:pl-[40%] flex flex-col' id='about'
     >
       {/* tag section */}
       <motion.div
-        className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white flex justify-center items-center gap-2 text-xs mb-[58px]'
+        className='w-[136px] h-[35px] border-[1px] border-[#565656] rounded-full text-white hidden justify-center items-center gap-2 text-xs mb-[58px] sm:flex'
         initial={{ x: -300, opacity: 1, scale: 0 }}
         whileInView={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
@@ -18,9 +18,19 @@ const About = () => {
         <AiOutlineUser className="mb-[2px] text-sm" />
         <span className='uppercase font-[250]'>About</span>
       </motion.div>
+      <motion.div
+        className='w-[100px] h-[30px] border-[1px] border-[#565656] rounded-full text-white sm:hidden justify-center items-center gap-2 text-xs mb-[38px] flex'
+        initial={{ x: 30, opacity:0 }}
+        whileInView={{ x: 0, opacity:1 }}
+        transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
+        viewport={{ margin: '0px 0px' }}
+      >
+        <AiOutlineUser className="mb-[2px] text-sm" />
+        <span className='uppercase font-[250]'>About</span>
+      </motion.div>
       {/* title section */}
       <div className=''>
-        <h3 className='text-5xl leading-[60px] font-light mb-8'>
+        <h3 className='text-4xl sm:text-5xl sm:leading-[60px] font-light mb-8'>
           <motion.div
             initial={{ y: -30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -38,7 +48,7 @@ const About = () => {
             an even <span className='text-[#58EA8B]'>better story</span>
           </motion.div>
         </h3>
-        <p className='mb-[1rem] leading-8 max-w-[610px] break-all text-base text-[#999999]'>
+        <p className='mb-[1rem] leading-6 sm:leading-8 max-w-[610px] break-all text-sm sm:text-base text-[#999999]'>
           <motion.span
             className='block'
             initial={{ y: 20, opacity: 0 }}
