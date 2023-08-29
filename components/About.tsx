@@ -30,7 +30,7 @@ const About = () => {
       </motion.div>
       {/* title section */}
       <div className=''>
-        <h3 className='text-4xl sm:text-5xl sm:leading-[60px] font-light mb-8'>
+        <h3 className='text-2xl sm:text-5xl sm:leading-[60px] font-light mb-8'>
           <motion.div
             initial={{ y: -30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}

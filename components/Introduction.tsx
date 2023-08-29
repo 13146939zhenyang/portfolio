@@ -20,7 +20,9 @@ const Introduction = ({ wrapper }: any) => {
   });
   return (
     <motion.div
-      className='text-white w-full pt-[10px] sm:pt-[70px] pl-4 pr-4 sm:pl-[40%] flex flex-col' id='introduction' ref={ref}
+      className='text-white w-full pt-[10px] sm:pt-[70px] pl-4 pr-4 sm:pl-[40%] flex flex-col'
+      id='introduction' 
+      ref={ref}
     >
       {/* tag section */}
       <motion.div
@@ -51,7 +53,7 @@ const Introduction = ({ wrapper }: any) => {
       </motion.div>
       {/* title */}
       <motion.div
-        className='flex flex-col mb-[43px] text-4xl sm:text-[78px] font-[300] leading-none gap-4 tracking-normal'
+        className='flex flex-col mb-[43px] text-2xl sm:text-[78px] font-[300] leading-none gap-4 tracking-normal'
       >
         <div>
           <motion.span
