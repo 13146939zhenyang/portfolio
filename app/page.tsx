@@ -17,7 +17,7 @@ export default function Home() {
       </div>
       <div className='bg-[#1f1f1f] fixed top-0 left-0 w-full h-full bg-opacity-80 -z-20'>
       </div>
-      <div className='w-full sm:h-full h-screen flex sm:justify-start justify-center items-center sm:fixed z-10 md:ml-5'>
+      <div className='sm:h-full h-screen flex sm:justify-start justify-center items-center sm:fixed z-10 md:ml-5'>
         <DeveloperCard />
       </div>
       <div className='hidden fixed h-full right-[70px] top-0 sm:flex items-center z-50'>
