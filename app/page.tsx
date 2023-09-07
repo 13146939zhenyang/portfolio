@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Introduction, About, Contact, DeveloperCard, Portfolio, Resume, Skills, SideNav } from '@/components'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Drawer, ConfigProvider } from 'antd'
-import { sideNavItems } from '@/utils/constants'
+import { sideNavItems, socialMediaLinks } from '@/utils/constants'
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -14,16 +14,17 @@ export default function Home() {
     setOpen(false);
   };
   const [selected, setSelected] = useState<string>('introduction')
-    const handleClick = (value: string) => {
-        setSelected(value)
-        const element = document.getElementById(`${value}`)
-        if (value === 'introduction') {
-            window.scrollTo({ top: element?.offsetTop! || 0, behavior: 'smooth' })
-        }
-        else {
-            window.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
-        }
+  const handleClick = (value: string) => {
+    setSelected(value)
+    onClose()
+    const element = document.getElementById(`${value}`)
+    if (value === 'introduction') {
+      window.scrollTo({ top: element?.offsetTop! || 0, behavior: 'smooth' })
     }
+    else {
+      window.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
+    }
+  }
   return (
     <ConfigProvider
       theme={
@@ -65,18 +66,26 @@ export default function Home() {
         <Portfolio />
         <Contact />
         <Drawer title="" closable={false} placement="right" onClose={onClose} open={open} width={345}>
-          <div className='w-full flex justify-center items-center'>
-            <div className='w-[159px] h-[410px] mt-[50px]'>
+          <div className='w-full flex flex-col items-center'>
+            <div className='w-[159px] h-[360px] mt-[50px]'>
               <p className='text-[#999999] block mb-[16px] text-lg'>Menu</p>
               {/* nav items */}
               <ul className='mb-[30px] py-[24px] flex flex-col gap-[20px]'>
                 {sideNavItems.map((item, index) => (
                   <li key={item.id} className=' flex flex-row items-center gap-[10px]' onClick={() => handleClick(item.id)}>
-                    <item.icon className={`${selected === item.id ? 'text-[#58EA8B]' : 'text-[#999999]'} w-[18px] h-[18px] cursor-pointer hover:text-[#58EA8B] transition-all  ease-in-out`} />
-                    <span className={`text-sm  cursor-pointer hover:text-[#58EA8B] transition-all  ease-in-out ${selected === item.id ? 'text-white' : 'text-[#999999]'}`} >{item.title}</span>
+                    <item.icon className={`${selected === item.id ? 'text-[#58EA8B]' : 'text-[#999999]'} w-[18px] h-[18px] cursor-pointer hover:text-[#58EA8B] transition-all ease-in-out ${item.id === 'introduction' ? 'mb-[3px]' : ''}`} />
+                    <span className={`text-xs  cursor-pointer transition-all  ease-in-out ${selected === item.id ? 'text-white' : 'text-[#999999]'}`}>{item.title}</span>
                   </li>
                 ))}
               </ul>
+            </div>
+            {/* social */}
+            <div className='w-[159px] h-[410px]'>
+              <p className='text-[#999999] block mb-[16px] text-lg'>Social</p>
+              <div className='flex flex-row gap-5'>
+                {socialMediaLinks.map((item,key)=>(
+                  <item.icon key={key} className='w-[15px] h-[15px] cursor-pointer text-[#999999] transition-all ease-in-out' onClick={() => window.open(item.url)} />
+                ))}</div>
             </div>
           </div>
         </Drawer>
