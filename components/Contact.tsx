@@ -1,12 +1,34 @@
-
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { BsEnvelope } from 'react-icons/bs'
-import { Form, Input, Button, ConfigProvider } from 'antd'
+import { Form, Input, ConfigProvider, message, Spin } from 'antd'
 import { motion } from 'framer-motion'
+import axios from 'axios'
+import { BASE_URL } from '@/utils/index'
+import { LoadingOutlined } from '@ant-design/icons'
+
+const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin rev={undefined} />;
 
 const Contact = () => {
-  const onFinish = (values: any) => {
+  const [form] = Form.useForm();
+  const [loading, setLoading] = useState<boolean>(false)
+  const onFinish = async (values: any) => {
+    setLoading(true)
     console.log('Success:', values);
+    const { data } = await axios.post(`/api/email`, values, {
+      baseURL: BASE_URL,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    if (data.success === true) {
+      form.resetFields()
+      message.success('Email sent successfully!')
+    }
+    else {
+      message.error('Email sent failed! Please try again later.')
+    }
+    setLoading(false)
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -54,8 +76,8 @@ const Contact = () => {
         </motion.div>
         <motion.div
           className='w-[130px] h-[30px] border-[1px] border-[#565656] rounded-full text-white sm:hidden justify-center items-center gap-2 text-xs mb-[38px] flex'
-          initial={{ x: 30, opacity:0 }}
-          whileInView={{ x: 0, opacity:1 }}
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, type: 'easeInOut', bounce: 0.2, delay: 0.2 }}
           viewport={{ margin: '0px 0px' }}
         >
@@ -85,6 +107,7 @@ const Contact = () => {
         </div>
         <Form
           name="contact"
+          form={form}
           initialValues={{ remember: true }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
@@ -143,8 +166,10 @@ const Contact = () => {
             <motion.button className='bg-[#58EA8B] hover:bg-transparent w-[243px] h-[52px] text-base uppercase rounded-full border-[1px] border-[#58EA8B] transition-all duration-150 ease-in-out hover:text-[#58EA8B]'
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 8 }}>
-              Send Message
+              transition={{ type: "spring", stiffness: 400, damping: 8 }}
+              disabled={loading}
+            >
+              {loading ? <Spin indicator={antIcon} /> : <span>Send Message</span>}
             </motion.button>
           </Form.Item>
         </Form>
