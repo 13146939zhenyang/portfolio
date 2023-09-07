@@ -91,6 +91,6 @@ export default function Home() {
         </Drawer>
       </main>
 
-    </ConfigProvider>
+    </ConfigProvider> 
   )
 }
