@@ -3,12 +3,9 @@ import { useState } from 'react'
 import { Introduction, About, Contact, DeveloperCard, Portfolio, Resume, Skills, SideNav } from '@/components'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Drawer, ConfigProvider } from 'antd'
+import { sideNavItems } from '@/utils/constants'
 
 export default function Home() {
-  const { scrollY } = useScroll()
-  // useMotionValueEvent(scrollY, "change", (latest) => {
-  //   console.log("Page scroll: ", latest)
-  // })
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -16,6 +13,17 @@ export default function Home() {
   const onClose = () => {
     setOpen(false);
   };
+  const [selected, setSelected] = useState<string>('introduction')
+    const handleClick = (value: string) => {
+        setSelected(value)
+        const element = document.getElementById(`${value}`)
+        if (value === 'introduction') {
+            window.scrollTo({ top: element?.offsetTop! || 0, behavior: 'smooth' })
+        }
+        else {
+            window.scrollTo({ top: element?.offsetTop! + 10 || 0, behavior: 'smooth' })
+        }
+    }
   return (
     <ConfigProvider
       theme={
@@ -23,6 +31,7 @@ export default function Home() {
           components: {
             Drawer: {
               colorBgElevated: '#191919',
+              paddingLG: 0,
             }
           },
         }
@@ -55,10 +64,21 @@ export default function Home() {
         <Skills />
         <Portfolio />
         <Contact />
-        <Drawer title="" closable={false} placement="right" onClose={onClose} open={open} width={300}>
-          <p className='text-[#999999]'>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+        <Drawer title="" closable={false} placement="right" onClose={onClose} open={open} width={345}>
+          <div className='w-full flex justify-center items-center'>
+            <div className='w-[159px] h-[410px] mt-[50px]'>
+              <p className='text-[#999999] block mb-[16px] text-lg'>Menu</p>
+              {/* nav items */}
+              <ul className='mb-[30px] py-[24px] flex flex-col gap-[20px]'>
+                {sideNavItems.map((item, index) => (
+                  <li key={item.id} className=' flex flex-row items-center gap-[10px]' onClick={() => handleClick(item.id)}>
+                    <item.icon className={`${selected === item.id ? 'text-[#58EA8B]' : 'text-[#999999]'} w-[18px] h-[18px] cursor-pointer hover:text-[#58EA8B] transition-all  ease-in-out`} />
+                    <span className={`text-sm  cursor-pointer hover:text-[#58EA8B] transition-all  ease-in-out ${selected === item.id ? 'text-white' : 'text-[#999999]'}`} >{item.title}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </Drawer>
       </main>
 
